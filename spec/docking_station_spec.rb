@@ -25,8 +25,12 @@ describe DockingStation do
 		end 
 	end 
 
-	it ' has a default capacity' do 
+	it 'has a default capacity' do 
 	expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
-	end 		
+	end 	
+
+	it 'can change capacity' do
+		expect(DockingStation.new(50).capacity).to eq 50
+	end 	
 end
 
